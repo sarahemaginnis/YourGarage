@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace YourGarage
 {
-    internal class Car : Vehicle
+    internal class Car : IVehicle
     {
+        int IVehicle.FuelCapacity { get; set; }
+        string IVehicle.Color { get; set; }
+        int IVehicle.PassengerOccupancy { get; set; }
         public bool IsElectric { get; set; }
         public void Driving()
         {
@@ -15,6 +18,10 @@ namespace YourGarage
         }
 
         public void Braking()
+        {
+
+        }
+        void IVehicle.Refueling()
         {
 
         }
